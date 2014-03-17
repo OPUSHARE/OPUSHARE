@@ -1,0 +1,20 @@
+<div class="contents">
+<h2>新規登録</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+	<%= devise_error_messages! %>
+
+	<div><strong>メールアドレス</strong><br />
+	<%= f.email_field :email, :autofocus => true %></div>
+
+	<div><strong>パスワード</strong><br />
+	<%= f.password_field :password %></div>
+
+	<div><strong>パスワード（確認）</strong><br />
+	<%= f.password_field :password_confirmation %></div>
+
+	<div><%= f.submit "送信" %></div>
+<% end %>
+
+<%= link_to '既にアカウントがある', new_user_session_path %>
+</div>

@@ -1,0 +1,23 @@
+<script src="/assets/jquery/jquery.bxslider.js"></script>
+<script>
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+</script>
+
+<div class="container">
+  <ul class="bxslider">
+    <li><%= image_tag "code.jpg" %></li>
+    <li><%= image_tag "web.jpg" %></li>
+    <li><%= image_tag "picture.jpg" %></li>
+  </ul>
+</div>
+
+<div align="center">
+<p>OPUSHAREはあなたの作ったWebサイトやアプリケーションのソースコード、<br>
+撮影した写真や描いたイラストなどを投稿するためのサービスです。<br>
+カテゴリーに縛りはありません。あなたの好きなものを投稿してください。<br>
+利用を開始するには、<%= link_to '新規登録', new_user_registration_path %>または<%= link_to 'ログイン', new_user_session_path %>が必要です。<br>
+このサービスの使い方に関しては、<%= link_to '利用方法', about_index_path %>を参照してみてください。</p>
+</div>
+

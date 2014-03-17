@@ -1,0 +1,41 @@
+<%= form_for @post, :html => {:multipart => true} do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <strong>タイトル</strong><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <strong>名前</strong><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <strong>説明</strong><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <strong>URL</strong><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <strong>タグ</strong><br>
+    <%= f.text_field :tag %>
+  </div>
+  <div class="field">
+    <strong>画像</strong><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <br><%= f.submit "投稿" %>
+  </div>
+<% end %>

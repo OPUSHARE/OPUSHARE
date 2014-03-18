@@ -27,6 +27,7 @@ gem 'less-rails'
 gem 'libv8'
 gem 'rmagick'
 gem 'bxslider-rails'
+gem 'rspec-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
